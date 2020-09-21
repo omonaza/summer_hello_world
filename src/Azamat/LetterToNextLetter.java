@@ -6,7 +6,8 @@ public class LetterToNextLetter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter word");
-        String foo = scanner.nextLine().trim();
+        String foo = scanner.nextLine();
+
 
         StringBuilder bar = new StringBuilder();
         for (char c : foo.toCharArray()) {
