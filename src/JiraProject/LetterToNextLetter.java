@@ -3,26 +3,36 @@ package JiraProject;
 import java.util.Scanner;
 
 public class LetterToNextLetter {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter word");
-        String foo = scanner.nextLine().trim();
+    public static String LetterChanges(String str) {
 
-        StringBuilder bar = new StringBuilder();
-        for (char c : foo.toCharArray()) {
-            bar.append(Character.toString((char) (((c - 'a' +1) % 26) + 'a')));
+        StringBuilder changeString = new StringBuilder();
+
+        for (char c : str.toCharArray()) {
+            if ( c >= 'a' && c <= 'z') {
+                char newChar = (char)((c - 'a' + 1) % ('z'-'a') + 'a');
+                if (newChar == 'a' || newChar == 'e' ||newChar == 'i' || newChar== 'o' || newChar== 'u') {
+                    char t = Character.toUpperCase(newChar);
+                    changeString.append(t);
+                }
+                else{
+                    changeString.append(newChar);
+                }
+            } else {
+                changeString.append(c);
+            }
         }
-//        char upperVowel = 0;
-//        for(int i=0;i<bar.length();i++){
-//            char ch = bar.charAt(i);
-//            if(ch == 'a' || ch == 'e' || ch == 'i' //not working
-//                    || ch == 'o' || ch == 'u') {
-//                upperVowel = Character.toUpperCase(ch);
-//
-//            }
-//            bar.toString().trim().replace(ch,upperVowel);
-//        }
-        System.out.println(bar);
+
+
+        return changeString.toString();
+    }
+
+    public static void main (String[] args) {
+// keep this function call here
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please enter a word to be changed\n alphabetically to next later");
+        String word = s.nextLine();
+        System.out.print(LetterChanges(word));
     }
 
 }
+
