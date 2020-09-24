@@ -10,6 +10,7 @@ public class userEmail {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter your email: ");
         String email = "";
+
         while (email!=Exception) {
           //  System.out.println("Enter your email: ");
             email = scn.next();
