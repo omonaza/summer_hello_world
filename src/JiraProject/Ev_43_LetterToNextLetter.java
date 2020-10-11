@@ -2,7 +2,7 @@ package JiraProject;
 
 import java.util.Scanner;
 
-public class LetterToNextLetter {
+public class Ev_43_LetterToNextLetter {
     public static String LetterChanges(String str) {
 
         StringBuilder changeString = new StringBuilder();
@@ -27,7 +27,7 @@ public class LetterToNextLetter {
     }
 
     public static void main (String[] args) {
-// keep this function call here
+
         Scanner s = new Scanner(System.in);
         System.out.println("Please enter a word to be changed\n alphabetically to next later");
         String word = s.nextLine();

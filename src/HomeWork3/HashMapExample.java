@@ -1,9 +1,6 @@
 package HomeWork3;
 
-import com.sun.javafx.collections.MappingChange;
-
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
