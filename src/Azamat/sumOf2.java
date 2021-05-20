@@ -19,7 +19,7 @@ public class sumOf2 {
         for(int i = 0; i < num.length;i++){
             //int secNum = targetSum - num[i];
             for(int j = i+1; j < num.length; j ++){
-                if(num[i]+num[j]==targetSum) {
+                if(num[i]+ num[j]==targetSum) {
                     result[0] = num[i];
                     result[1] = num[j];
                     return result;
